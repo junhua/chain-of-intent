@@ -77,5 +77,200 @@
         "track_order"
       ]
     }
+  },
+  {
+    "conversation_id": "generated_3",
+    "turns": 1,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "May discount ba kayo ngayon??",
+        "intent": "discount_inquiry",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "May discount ba kayo ngayon?"
+      }
+    ],
+    "metadata": {
+      "generated": true,
+      "intents": [
+        "discount_inquiry"
+      ]
+    }
+  },
+  {
+    "conversation_id": "generated_4",
+    "turns": 2,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Can help me change delivery address??",
+        "intent": "order_modification",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Can help me change delivery address?"
+      },
+      {
+        "turn": 2,
+        "question": "Can I get free shipping??",
+        "intent": "shipping_cost",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Can I get free shipping?"
+      }
+    ],
+    "metadata": {
+      "generated": true,
+      "intents": [
+        "order_modification",
+        "shipping_cost"
+      ]
+    }
+  },
+  {
+    "conversation_id": "generated_5",
+    "turns": 2,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Nomor pesanannya ORD67890?",
+        "intent": "track_order",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Nomor pesanannya ORD67890"
+      },
+      {
+        "turn": 2,
+        "question": "When will it arrive??",
+        "intent": "delivery_time",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "When will it arrive?"
+      }
+    ],
+    "metadata": {
+      "generated": true,
+      "intents": [
+        "track_order",
+        "delivery_time"
+      ]
+    }
+  },
+  {
+    "conversation_id": "generated_6",
+    "turns": 2,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Barang saya rosak sampai?",
+        "intent": "product_issue",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Barang saya rosak sampai"
+      },
+      {
+        "turn": 2,
+        "question": "What's your return policy??",
+        "intent": "return_policy",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "What's your return policy?"
+      }
+    ],
+    "metadata": {
+      "generated": true,
+      "intents": [
+        "product_issue",
+        "return_policy"
+      ]
+    }
+  },
+  {
+    "conversation_id": "generated_7",
+    "turns": 2,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "How do I cancel my order??",
+        "intent": "cancel_order",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "How do I cancel my order?"
+      },
+      {
+        "turn": 2,
+        "question": "Where is my order #ORD12345??",
+        "intent": "track_order",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Where is my order #ORD12345?"
+      }
+    ],
+    "metadata": {
+      "generated": true,
+      "intents": [
+        "cancel_order",
+        "track_order"
+      ]
+    }
+  },
+  {
+    "conversation_id": "generated_8",
+    "turns": 2,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "What's your return policy??",
+        "intent": "return_policy",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "What's your return policy?"
+      },
+      {
+        "turn": 2,
+        "question": "When will it arrive??",
+        "intent": "delivery_time",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "When will it arrive?"
+      }
+    ],
+    "metadata": {
+      "generated": true,
+      "intents": [
+        "return_policy",
+        "delivery_time"
+      ]
+    }
+  },
+  {
+    "conversation_id": "generated_9",
+    "turns": 2,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "May discount ba kayo ngayon??",
+        "intent": "discount_inquiry",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "May discount ba kayo ngayon?"
+      },
+      {
+        "turn": 2,
+        "question": "Paano mag-apply ng discount code??",
+        "intent": "discount_inquiry",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Paano mag-apply ng discount code?"
+      }
+    ],
+    "metadata": {
+      "generated": true,
+      "intents": [
+        "discount_inquiry",
+        "discount_inquiry"
+      ]
+    }
   }
 ]

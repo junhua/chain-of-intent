@@ -1,34 +1,62 @@
 {
-  "total_conversations": 3,
-  "total_turns": 5,
+  "total_conversations": 10,
+  "total_turns": 18,
   "languages": {
-    "en": 3
+    "en": 10
   },
   "domains": {
-    "ecommerce": 3
+    "ecommerce": 10
   },
   "intents": {
-    "order_modification": 1,
-    "shipping_cost": 1,
-    "track_order": 3
+    "order_modification": 2,
+    "shipping_cost": 2,
+    "track_order": 5,
+    "discount_inquiry": 3,
+    "delivery_time": 2,
+    "product_issue": 1,
+    "return_policy": 2,
+    "cancel_order": 1
   },
   "turn_distribution": {
-    "2": 2,
-    "1": 1
+    "2": 8,
+    "1": 2
   },
   "questions_per_intent": {
     "order_modification": [
+      "Can help me change delivery address??",
       "Can help me change delivery address??"
     ],
     "shipping_cost": [
+      "Can I get free shipping??",
       "Can I get free shipping??"
     ],
     "track_order": [
       "Nomor pesanannya ORD67890?",
       "Pesanan saya belum sampai?",
+      "Where is my order #ORD12345??",
+      "Nomor pesanannya ORD67890?",
       "Where is my order #ORD12345??"
+    ],
+    "discount_inquiry": [
+      "May discount ba kayo ngayon??",
+      "May discount ba kayo ngayon??",
+      "Paano mag-apply ng discount code??"
+    ],
+    "delivery_time": [
+      "When will it arrive??",
+      "When will it arrive??"
+    ],
+    "product_issue": [
+      "Barang saya rosak sampai?"
+    ],
+    "return_policy": [
+      "What's your return policy??",
+      "What's your return policy??"
+    ],
+    "cancel_order": [
+      "How do I cancel my order??"
     ]
   },
-  "avg_question_length": 4.6,
-  "avg_turns_per_conversation": 1.6666666666666667
+  "avg_question_length": 4.611111111111111,
+  "avg_turns_per_conversation": 1.8
 }

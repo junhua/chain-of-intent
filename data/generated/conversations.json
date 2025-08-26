@@ -62,5 +62,165 @@
       }
     ],
     "conv_id": "generated_2"
+  },
+  {
+    "turns": 1,
+    "intents": [
+      "discount_inquiry"
+    ],
+    "dialogue": [
+      {
+        "turn": 1,
+        "intent": "discount_inquiry",
+        "question": "May discount ba kayo ngayon??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "May discount ba kayo ngayon?"
+      }
+    ],
+    "conv_id": "generated_3"
+  },
+  {
+    "turns": 2,
+    "intents": [
+      "order_modification",
+      "shipping_cost"
+    ],
+    "dialogue": [
+      {
+        "turn": 1,
+        "intent": "order_modification",
+        "question": "Can help me change delivery address??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Can help me change delivery address?"
+      },
+      {
+        "turn": 2,
+        "intent": "shipping_cost",
+        "question": "Can I get free shipping??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Can I get free shipping?"
+      }
+    ],
+    "conv_id": "generated_4"
+  },
+  {
+    "turns": 2,
+    "intents": [
+      "track_order",
+      "delivery_time"
+    ],
+    "dialogue": [
+      {
+        "turn": 1,
+        "intent": "track_order",
+        "question": "Nomor pesanannya ORD67890?",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Nomor pesanannya ORD67890"
+      },
+      {
+        "turn": 2,
+        "intent": "delivery_time",
+        "question": "When will it arrive??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "When will it arrive?"
+      }
+    ],
+    "conv_id": "generated_5"
+  },
+  {
+    "turns": 2,
+    "intents": [
+      "product_issue",
+      "return_policy"
+    ],
+    "dialogue": [
+      {
+        "turn": 1,
+        "intent": "product_issue",
+        "question": "Barang saya rosak sampai?",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Barang saya rosak sampai"
+      },
+      {
+        "turn": 2,
+        "intent": "return_policy",
+        "question": "What's your return policy??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "What's your return policy?"
+      }
+    ],
+    "conv_id": "generated_6"
+  },
+  {
+    "turns": 2,
+    "intents": [
+      "cancel_order",
+      "track_order"
+    ],
+    "dialogue": [
+      {
+        "turn": 1,
+        "intent": "cancel_order",
+        "question": "How do I cancel my order??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "How do I cancel my order?"
+      },
+      {
+        "turn": 2,
+        "intent": "track_order",
+        "question": "Where is my order #ORD12345??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Where is my order #ORD12345?"
+      }
+    ],
+    "conv_id": "generated_7"
+  },
+  {
+    "turns": 2,
+    "intents": [
+      "return_policy",
+      "delivery_time"
+    ],
+    "dialogue": [
+      {
+        "turn": 1,
+        "intent": "return_policy",
+        "question": "What's your return policy??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "What's your return policy?"
+      },
+      {
+        "turn": 2,
+        "intent": "delivery_time",
+        "question": "When will it arrive??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "When will it arrive?"
+      }
+    ],
+    "conv_id": "generated_8"
+  },
+  {
+    "turns": 2,
+    "intents": [
+      "discount_inquiry",
+      "discount_inquiry"
+    ],
+    "dialogue": [
+      {
+        "turn": 1,
+        "intent": "discount_inquiry",
+        "question": "May discount ba kayo ngayon??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "May discount ba kayo ngayon?"
+      },
+      {
+        "turn": 2,
+        "intent": "discount_inquiry",
+        "question": "Paano mag-apply ng discount code??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Paano mag-apply ng discount code?"
+      }
+    ],
+    "conv_id": "generated_9"
   }
 ]
