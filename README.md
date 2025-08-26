@@ -285,6 +285,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-For questions or issues, please contact:
-- Junhua Liu (j@forth.ai)
-- Bin Fu (bin.fu@shopee.com)
+For questions or issues, please create an issue in the repo.
