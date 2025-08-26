@@ -141,7 +141,17 @@ tail -f logs/training.log
 tensorboard --logdir runs/
 ```
 
-### Step 5: Customize Configuration
+### Step 5: Verify Installation
+
+Run the basic functionality test to ensure everything works:
+
+```bash
+python test_basic_functionality.py
+```
+
+**Expected Output**: All tests should pass with "🎉 All tests passed!"
+
+### Step 6: Customize Configuration
 
 Edit `config.yaml` to customize:
 
@@ -249,14 +259,15 @@ The implementation includes comprehensive evaluation:
 
 ```
 code/
-├── chain_of_intent.py     # Chain-of-Intent implementation
-├── mint_cl.py            # MINT-CL model and training
-├── data_utils.py         # Data processing utilities
-├── train.py              # Training script
-├── generate_dialogues.py # Dialogue generation script
-├── config.yaml           # Configuration file
-├── requirements.txt      # Dependencies
-└── README.md            # This file
+├── chain_of_intent.py           # Chain-of-Intent implementation
+├── mint_cl.py                  # MINT-CL model and training
+├── data_utils.py               # Data processing utilities
+├── train.py                    # Training script
+├── generate_dialogues.py       # Dialogue generation script
+├── test_basic_functionality.py # Basic functionality tests
+├── config.yaml                 # Configuration file
+├── requirements.txt            # Dependencies
+└── README.md                  # This file
 ```
 
 ## Research Contributions
