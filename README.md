@@ -13,10 +13,10 @@ The MINT-E dataset will be made available at: https://huggingface.co/datasets/fu
 ## Pipeline Overview
 
 ```
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+┌──────────────────┐    ┌──────────────────┐    ┌─────────────────┐
 │  Domain Knowledge│    │ Chain-of-Intent  │    │    MINT-CL      │
 │   Extraction     │───▶│   Generation     │───▶│ Classification  │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
+└──────────────────┘    └──────────────────┘    └─────────────────┘
          │                        │                        │
     ┌────▼────┐              ┌────▼────┐              ┌────▼────┐
     │Chat Logs│              │HMM+LLMs │              │XLM-R +  │
