@@ -6,6 +6,10 @@ This repository contains a source code implementation for the paper "From Intent
 
 The original implementation code cannot be shared due to copyright and proprietary restrictions. This repository provides a clean implementation generated based on the methodologies and algorithms described in the published paper.
 
+## Dataset Availability
+
+The MINT-E dataset will be made available at: https://huggingface.co/datasets/fubincom/MINT_E/tree/main (currently under construction)
+
 ## Overview
 
 The implementation includes:
