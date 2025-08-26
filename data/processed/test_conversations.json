@@ -1,0 +1,329 @@
+[
+  {
+    "conversation_id": "conv_26",
+    "turns": 1,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "I want to cancel",
+        "intent": "cancel_order",
+        "answer": "I'll help you with cancel order."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_23",
+    "turns": 3,
+    "language": "id",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Payment failed",
+        "intent": "payment_issue",
+        "answer": "I'll help you with payment issue."
+      },
+      {
+        "turn": 2,
+        "question": "Payment failed",
+        "intent": "payment_issue",
+        "answer": "I'll help you with payment issue."
+      },
+      {
+        "turn": 3,
+        "question": "When will I get refund?",
+        "intent": "refund_status",
+        "answer": "I'll help you with refund status."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_80",
+    "turns": 1,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Return policy?",
+        "intent": "return_policy",
+        "answer": "I'll help you with return policy."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_7",
+    "turns": 3,
+    "language": "id",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Refund status?",
+        "intent": "refund_status",
+        "answer": "I'll help you with refund status."
+      },
+      {
+        "turn": 2,
+        "question": "I want to cancel",
+        "intent": "cancel_order",
+        "answer": "I'll help you with cancel order."
+      },
+      {
+        "turn": 3,
+        "question": "Payment failed",
+        "intent": "payment_issue",
+        "answer": "I'll help you with payment issue."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_94",
+    "turns": 2,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "When will it arrive?",
+        "intent": "delivery_time",
+        "answer": "I'll help you with delivery time."
+      },
+      {
+        "turn": 2,
+        "question": "Is this available?",
+        "intent": "product_info",
+        "answer": "I'll help you with product info."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_38",
+    "turns": 1,
+    "language": "my",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Can you track my package?",
+        "intent": "track_order",
+        "answer": "I'll help you with track order."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_59",
+    "turns": 3,
+    "language": "my",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Can I return this?",
+        "intent": "return_policy",
+        "answer": "I'll help you with return policy."
+      },
+      {
+        "turn": 2,
+        "question": "How long for shipping?",
+        "intent": "delivery_time",
+        "answer": "I'll help you with delivery time."
+      },
+      {
+        "turn": 3,
+        "question": "How to return?",
+        "intent": "return_policy",
+        "answer": "I'll help you with return policy."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_51",
+    "turns": 5,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Order status please",
+        "intent": "track_order",
+        "answer": "I'll help you with track order."
+      },
+      {
+        "turn": 2,
+        "question": "Can you track my package?",
+        "intent": "track_order",
+        "answer": "I'll help you with track order."
+      },
+      {
+        "turn": 3,
+        "question": "How to cancel?",
+        "intent": "cancel_order",
+        "answer": "I'll help you with cancel order."
+      },
+      {
+        "turn": 4,
+        "question": "Card was charged twice",
+        "intent": "payment_issue",
+        "answer": "I'll help you with payment issue."
+      },
+      {
+        "turn": 5,
+        "question": "Return policy?",
+        "intent": "return_policy",
+        "answer": "I'll help you with return policy."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_41",
+    "turns": 1,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Is this available?",
+        "intent": "product_info",
+        "answer": "I'll help you with product info."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_19",
+    "turns": 2,
+    "language": "id",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Cancel my order",
+        "intent": "cancel_order",
+        "answer": "I'll help you with cancel order."
+      },
+      {
+        "turn": 2,
+        "question": "When will I get refund?",
+        "intent": "refund_status",
+        "answer": "I'll help you with refund status."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_83",
+    "turns": 1,
+    "language": "my",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Can I return this?",
+        "intent": "return_policy",
+        "answer": "I'll help you with return policy."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_98",
+    "turns": 5,
+    "language": "id",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "When will I get refund?",
+        "intent": "refund_status",
+        "answer": "I'll help you with refund status."
+      },
+      {
+        "turn": 2,
+        "question": "Delivery time?",
+        "intent": "delivery_time",
+        "answer": "I'll help you with delivery time."
+      },
+      {
+        "turn": 3,
+        "question": "Delivery time?",
+        "intent": "delivery_time",
+        "answer": "I'll help you with delivery time."
+      },
+      {
+        "turn": 4,
+        "question": "Product details?",
+        "intent": "product_info",
+        "answer": "I'll help you with product info."
+      },
+      {
+        "turn": 5,
+        "question": "Can you track my package?",
+        "intent": "track_order",
+        "answer": "I'll help you with track order."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_28",
+    "turns": 2,
+    "language": "my",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Card was charged twice",
+        "intent": "payment_issue",
+        "answer": "I'll help you with payment issue."
+      },
+      {
+        "turn": 2,
+        "question": "Cancel my order",
+        "intent": "cancel_order",
+        "answer": "I'll help you with cancel order."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_66",
+    "turns": 1,
+    "language": "id",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "How long for shipping?",
+        "intent": "delivery_time",
+        "answer": "I'll help you with delivery time."
+      }
+    ],
+    "metadata": null
+  },
+  {
+    "conversation_id": "conv_6",
+    "turns": 1,
+    "language": "my",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Return policy?",
+        "intent": "return_policy",
+        "answer": "I'll help you with return policy."
+      }
+    ],
+    "metadata": null
+  }
+]

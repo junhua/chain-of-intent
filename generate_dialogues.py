@@ -201,7 +201,7 @@ def create_sample_seed_data() -> List[Dict]:
     
     for conv_id in range(500):  # Generate 500 seed conversations
         # Random conversation length (weighted towards shorter conversations)
-        num_turns = np.random.choice([1, 2, 3, 4, 5], p=[0.4, 0.3, 0.15, 0.1, 0.05])
+        num_turns = int(np.random.choice([1, 2, 3, 4, 5], p=[0.4, 0.3, 0.15, 0.1, 0.05]))
         
         dialogue = []
         current_intent = random.choice(intents)
@@ -238,7 +238,7 @@ def create_sample_seed_data() -> List[Dict]:
         
         seed_conversations.append({
             'conversation_id': f'seed_{conv_id}',
-            'turn': num_turns,
+            'turns': int(num_turns),
             'language': random.choice(['en', 'id', 'my', 'ph', 'sg']),
             'dialogue': dialogue
         })

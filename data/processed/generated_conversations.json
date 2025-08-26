@@ -1,0 +1,73 @@
+[
+  {
+    "conversation_id": "generated_0",
+    "turns": 1,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Where is my order #ORD40771??",
+        "intent": "track_order",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Where is my order #ORD40771?"
+      }
+    ],
+    "metadata": {
+      "generated": true,
+      "intents": [
+        "track_order"
+      ]
+    }
+  },
+  {
+    "conversation_id": "generated_1",
+    "turns": 2,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "What are the product specifications??",
+        "intent": "product_info",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "What are the product specifications?"
+      },
+      {
+        "turn": 2,
+        "question": "Do you have a size chart??",
+        "intent": "size_guide",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Do you have a size chart?"
+      }
+    ],
+    "metadata": {
+      "generated": true,
+      "intents": [
+        "product_info",
+        "size_guide"
+      ]
+    }
+  },
+  {
+    "conversation_id": "generated_2",
+    "turns": 1,
+    "language": "en",
+    "domain": "ecommerce",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "I forgot my login details?",
+        "intent": "account_issue",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "I forgot my login details"
+      }
+    ],
+    "metadata": {
+      "generated": true,
+      "intents": [
+        "account_issue"
+      ]
+    }
+  }
+]

@@ -116,10 +116,10 @@ class ChainOfIntent:
             raise ValueError("Intent transitions not loaded. Call extract_domain_knowledge first.")
         
         # Sample number of turns
-        turns = np.random.choice(
+        turns = int(np.random.choice(
             list(self.intent_transitions.turn_distribution.keys()),
             p=list(self.intent_transitions.turn_distribution.values())
-        )
+        ))
         
         # Sample initial intent
         intents = [np.random.choice(

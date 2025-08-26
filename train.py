@@ -294,8 +294,8 @@ def run_training(config: Dict[str, Any]):
     training_history = trainer.train(
         train_dataloader=train_loader,
         val_dataloader=val_loader,
-        epochs=config['mint_cl']['num_epochs'],
-        learning_rate=config['mint_cl']['learning_rate']
+        epochs=int(config['mint_cl']['num_epochs']),
+        learning_rate=float(config['mint_cl']['learning_rate'])
     )
     
     # Save training history

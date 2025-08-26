@@ -1,0 +1,58 @@
+[
+  {
+    "turns": 1,
+    "intents": [
+      "track_order"
+    ],
+    "dialogue": [
+      {
+        "turn": 1,
+        "intent": "track_order",
+        "question": "Where is my order #ORD40771??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Where is my order #ORD40771?"
+      }
+    ],
+    "conv_id": "generated_0"
+  },
+  {
+    "turns": 2,
+    "intents": [
+      "product_info",
+      "size_guide"
+    ],
+    "dialogue": [
+      {
+        "turn": 1,
+        "intent": "product_info",
+        "question": "What are the product specifications??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "What are the product specifications?"
+      },
+      {
+        "turn": 2,
+        "intent": "size_guide",
+        "question": "Do you have a size chart??",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "Do you have a size chart?"
+      }
+    ],
+    "conv_id": "generated_1"
+  },
+  {
+    "turns": 1,
+    "intents": [
+      "account_issue"
+    ],
+    "dialogue": [
+      {
+        "turn": 1,
+        "intent": "account_issue",
+        "question": "I forgot my login details?",
+        "answer": "I understand your concern. Let me help you with that.",
+        "reference_question": "I forgot my login details"
+      }
+    ],
+    "conv_id": "generated_2"
+  }
+]

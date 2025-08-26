@@ -1,0 +1,115 @@
+2025-08-26 18:54:50,158 - __main__ - INFO - Starting training with config: config.yaml
+2025-08-26 18:54:50,162 - __main__ - INFO - Random seed set to: 42
+2025-08-26 18:54:50,162 - __main__ - INFO - Using device: cpu
+2025-08-26 18:54:50,162 - __main__ - INFO - Preparing data...
+2025-08-26 18:54:50,162 - __main__ - INFO - Processing raw data...
+2025-08-26 18:54:50,164 - data_utils - INFO - Dataset split: Train=69, Val=16, Test=15
+2025-08-26 18:54:50,166 - data_utils - INFO - Saved data to data/processed/train_conversations.json in json format
+2025-08-26 18:54:50,166 - data_utils - INFO - Saved data to data/processed/val_conversations.json in json format
+2025-08-26 18:54:50,166 - data_utils - INFO - Saved data to data/processed/test_conversations.json in json format
+2025-08-26 18:54:50,166 - __main__ - INFO - Saved processed data: Train=69, Val=16, Test=15
+2025-08-26 18:54:50,166 - __main__ - INFO - Augmenting data with alternative responses...
+2025-08-26 18:54:50,167 - __main__ - INFO - Building intent hierarchy...
+2025-08-26 18:54:50,167 - __main__ - INFO - Intent hierarchy: Level1=7, Level2=7, Level3=7
+2025-08-26 18:54:50,167 - __main__ - INFO - Creating data loaders...
+2025-08-26 18:54:50,167 - __main__ - ERROR - Training failed with error: 
+XLMRobertaTokenizer requires the SentencePiece library but it was not found in your environment. Check out the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+2025-08-26 18:55:03,515 - __main__ - INFO - Starting training with config: config.yaml
+2025-08-26 18:55:03,516 - __main__ - INFO - Random seed set to: 42
+2025-08-26 18:55:03,516 - __main__ - INFO - Using device: cpu
+2025-08-26 18:55:03,516 - __main__ - INFO - Preparing data...
+2025-08-26 18:55:03,516 - __main__ - INFO - Loading existing processed data...
+2025-08-26 18:55:03,516 - data_utils - INFO - Loaded 69 conversations from JSON
+2025-08-26 18:55:03,516 - data_utils - INFO - Loaded 16 conversations from JSON
+2025-08-26 18:55:03,516 - data_utils - INFO - Loaded 15 conversations from JSON
+2025-08-26 18:55:03,516 - __main__ - INFO - Augmenting data with alternative responses...
+2025-08-26 18:55:03,517 - __main__ - INFO - Building intent hierarchy...
+2025-08-26 18:55:03,517 - __main__ - INFO - Intent hierarchy: Level1=7, Level2=7, Level3=7
+2025-08-26 18:55:03,517 - __main__ - INFO - Creating data loaders...
+2025-08-26 18:55:03,519 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-08-26 18:55:03,792 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-08-26 18:55:03,795 - filelock - DEBUG - Attempting to acquire lock 5521297424 on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+2025-08-26 18:55:03,795 - filelock - DEBUG - Lock 5521297424 acquired on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+2025-08-26 18:55:04,036 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 25
+2025-08-26 18:55:04,050 - filelock - DEBUG - Attempting to release lock 5521297424 on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+2025-08-26 18:55:04,050 - filelock - DEBUG - Lock 5521297424 released on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/34ddbd64a4cd3f2d9d8a9120d3662d0bf91baead.lock
+2025-08-26 18:55:04,298 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 307 139
+2025-08-26 18:55:04,553 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/FacebookAI/xlm-roberta-base/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-08-26 18:55:04,870 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 0
+2025-08-26 18:55:04,872 - filelock - DEBUG - Attempting to acquire lock 5517636496 on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/db9af13bf09fd3028ca32be90d3fb66d5e470399.lock
+2025-08-26 18:55:04,873 - filelock - DEBUG - Lock 5517636496 acquired on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/db9af13bf09fd3028ca32be90d3fb66d5e470399.lock
+2025-08-26 18:55:05,117 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 5069051
+2025-08-26 18:55:06,189 - filelock - DEBUG - Attempting to release lock 5517636496 on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/db9af13bf09fd3028ca32be90d3fb66d5e470399.lock
+2025-08-26 18:55:06,189 - filelock - DEBUG - Lock 5517636496 released on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/db9af13bf09fd3028ca32be90d3fb66d5e470399.lock
+2025-08-26 18:55:06,439 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2025-08-26 18:55:06,683 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+2025-08-26 18:55:06,940 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 0
+2025-08-26 18:55:06,941 - filelock - DEBUG - Attempting to acquire lock 5517636496 on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/463f3414782c1c9405828c9b31bfa36dda1f45c5.lock
+2025-08-26 18:55:06,942 - filelock - DEBUG - Lock 5517636496 acquired on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/463f3414782c1c9405828c9b31bfa36dda1f45c5.lock
+2025-08-26 18:55:07,182 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 9096718
+2025-08-26 18:55:08,472 - filelock - DEBUG - Attempting to release lock 5517636496 on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/463f3414782c1c9405828c9b31bfa36dda1f45c5.lock
+2025-08-26 18:55:08,473 - filelock - DEBUG - Lock 5517636496 released on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/463f3414782c1c9405828c9b31bfa36dda1f45c5.lock
+2025-08-26 18:55:08,717 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/chat_template.jinja HTTP/1.1" 404 0
+2025-08-26 18:55:09,067 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+2025-08-26 18:55:09,068 - filelock - DEBUG - Attempting to acquire lock 5517835792 on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/1960141250d189366dfb76630ba794a9c104ec07.lock
+2025-08-26 18:55:09,069 - filelock - DEBUG - Lock 5517835792 acquired on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/1960141250d189366dfb76630ba794a9c104ec07.lock
+2025-08-26 18:55:09,308 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 615
+2025-08-26 18:55:09,309 - filelock - DEBUG - Attempting to release lock 5517835792 on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/1960141250d189366dfb76630ba794a9c104ec07.lock
+2025-08-26 18:55:09,309 - filelock - DEBUG - Lock 5517835792 released on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/1960141250d189366dfb76630ba794a9c104ec07.lock
+2025-08-26 18:55:09,901 - __main__ - INFO - Initializing model...
+2025-08-26 18:55:10,144 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+2025-08-26 18:55:10,395 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+2025-08-26 18:55:10,709 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/model.safetensors HTTP/1.1" 302 0
+2025-08-26 18:55:10,713 - filelock - DEBUG - Attempting to acquire lock 5517835792 on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/6fd4797bc397c3b8b55d6bb5740366b57e6a3ce91c04c77f22aafc0c128e6feb.lock
+2025-08-26 18:55:10,713 - filelock - DEBUG - Lock 5517835792 acquired on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/6fd4797bc397c3b8b55d6bb5740366b57e6a3ce91c04c77f22aafc0c128e6feb.lock
+2025-08-26 18:55:11,317 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/FacebookAI/xlm-roberta-base/xet-read-token/e73636d4f797dec63c3081bb6ed5c7b0bb3f2089 HTTP/1.1" 200 325
+2025-08-26 18:55:24,816 - filelock - DEBUG - Attempting to release lock 5517835792 on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/6fd4797bc397c3b8b55d6bb5740366b57e6a3ce91c04c77f22aafc0c128e6feb.lock
+2025-08-26 18:55:24,817 - filelock - DEBUG - Lock 5517835792 released on /Users/LJHOLD/.cache/huggingface/hub/.locks/models--xlm-roberta-base/6fd4797bc397c3b8b55d6bb5740366b57e6a3ce91c04c77f22aafc0c128e6feb.lock
+2025-08-26 18:55:24,884 - __main__ - INFO - Starting training...
+2025-08-26 18:55:24,884 - __main__ - ERROR - Training failed with error: '<=' not supported between instances of 'float' and 'str'
+2025-08-26 18:56:07,330 - __main__ - INFO - Starting training with config: config.yaml
+2025-08-26 18:56:07,332 - __main__ - INFO - Random seed set to: 42
+2025-08-26 18:56:07,332 - __main__ - INFO - Using device: cpu
+2025-08-26 18:56:07,332 - __main__ - INFO - Preparing data...
+2025-08-26 18:56:07,332 - __main__ - INFO - Loading existing processed data...
+2025-08-26 18:56:07,332 - data_utils - INFO - Loaded 69 conversations from JSON
+2025-08-26 18:56:07,333 - data_utils - INFO - Loaded 16 conversations from JSON
+2025-08-26 18:56:07,333 - data_utils - INFO - Loaded 15 conversations from JSON
+2025-08-26 18:56:07,333 - __main__ - INFO - Augmenting data with alternative responses...
+2025-08-26 18:56:07,333 - __main__ - INFO - Building intent hierarchy...
+2025-08-26 18:56:07,333 - __main__ - INFO - Intent hierarchy: Level1=7, Level2=7, Level3=7
+2025-08-26 18:56:07,333 - __main__ - INFO - Creating data loaders...
+2025-08-26 18:56:07,334 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-08-26 18:56:07,683 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-08-26 18:56:07,939 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 307 139
+2025-08-26 18:56:08,255 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/FacebookAI/xlm-roberta-base/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-08-26 18:56:08,854 - __main__ - INFO - Initializing model...
+2025-08-26 18:56:09,084 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+2025-08-26 18:56:09,324 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+2025-08-26 18:56:09,370 - __main__ - INFO - Starting training...
+2025-08-26 18:56:09,370 - mint_cl - INFO - Epoch 1/10
+2025-08-26 18:56:41,901 - __main__ - ERROR - Training failed with error: Boolean value of Tensor with more than one value is ambiguous
+2025-08-26 18:56:58,674 - __main__ - INFO - Starting training with config: config.yaml
+2025-08-26 18:56:58,675 - __main__ - INFO - Random seed set to: 42
+2025-08-26 18:56:58,676 - __main__ - INFO - Using device: cpu
+2025-08-26 18:56:58,676 - __main__ - INFO - Preparing data...
+2025-08-26 18:56:58,676 - __main__ - INFO - Loading existing processed data...
+2025-08-26 18:56:58,676 - data_utils - INFO - Loaded 69 conversations from JSON
+2025-08-26 18:56:58,676 - data_utils - INFO - Loaded 16 conversations from JSON
+2025-08-26 18:56:58,677 - data_utils - INFO - Loaded 15 conversations from JSON
+2025-08-26 18:56:58,677 - __main__ - INFO - Augmenting data with alternative responses...
+2025-08-26 18:56:58,677 - __main__ - INFO - Building intent hierarchy...
+2025-08-26 18:56:58,677 - __main__ - INFO - Intent hierarchy: Level1=7, Level2=7, Level3=7
+2025-08-26 18:56:58,677 - __main__ - INFO - Creating data loaders...
+2025-08-26 18:56:58,678 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-08-26 18:56:59,556 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-08-26 18:56:59,884 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 307 139
+2025-08-26 18:57:00,128 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/FacebookAI/xlm-roberta-base/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-08-26 18:57:00,709 - __main__ - INFO - Initializing model...
+2025-08-26 18:57:00,943 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+2025-08-26 18:57:01,193 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+2025-08-26 18:57:01,233 - __main__ - INFO - Starting training...
+2025-08-26 18:57:01,233 - mint_cl - INFO - Epoch 1/10

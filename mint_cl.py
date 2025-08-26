@@ -2,7 +2,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
-from transformers import XLMRobertaModel, XLMRobertaTokenizer, AdamW
+from transformers import XLMRobertaModel, XLMRobertaTokenizer
+try:
+    from transformers import AdamW
+except ImportError:
+    from torch.optim import AdamW
 from sklearn.metrics import accuracy_score, classification_report, f1_score
 import numpy as np
 import pandas as pd
@@ -233,7 +237,11 @@ class MINTContrastiveClassifier(nn.Module):
         }
         
         # Contrastive learning forward pass (if data available)
-        if batch.get('has_contrastive', False) and batch['has_contrastive'].any():
+        has_contrastive_data = batch.get('has_contrastive', False)
+        if torch.is_tensor(has_contrastive_data):
+            has_contrastive_data = has_contrastive_data.any().item()
+        
+        if has_contrastive_data:
             # Process positive responses
             pos_outputs = self.intent_classifier(
                 batch['pos_input_ids'],
