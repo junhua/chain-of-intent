@@ -1,0 +1,206 @@
+# Configuration file for MINT-CIKM25 Chain-of-Intent and MINT-CL
+
+# Project settings
+project:
+  name: "MINT-CIKM25"
+  version: "1.0.0"
+  description: "Chain-of-Intent dialogue generation and MINT-CL classification"
+
+# Data settings
+data:
+  # Input data paths
+  raw_data_path: "data/raw/"
+  processed_data_path: "data/processed/"
+  
+  # Dataset configuration
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  random_seed: 42
+  
+  # Supported languages
+  languages: ["en", "id", "my", "ph", "sg", "vn", "br", "th"]
+  
+  # Intent hierarchy levels
+  max_hierarchy_levels: 3
+  
+  # Data validation
+  min_conversations_per_language: 10
+  min_turns_per_conversation: 1
+  max_turns_per_conversation: 20
+
+# Chain-of-Intent settings
+chain_of_intent:
+  # Language models
+  primary_llm: "gpt-3.5-turbo"
+  alternative_llm: "llama-3-8b"
+  evaluation_llm: "gpt-4"
+  
+  # Generation parameters
+  max_conversations: 10000
+  temperature: 0.7
+  max_tokens_question: 100
+  max_tokens_answer: 150
+  max_tokens_evaluation: 10
+  
+  # HMM parameters
+  use_turn_distribution: true
+  use_intent_transitions: true
+  smoothing_alpha: 0.1  # For transition probability smoothing
+  
+  # Quality control
+  min_quality_score: 5.0
+  enable_answer_ranking: true
+
+# MINT-CL settings
+mint_cl:
+  # Model architecture
+  base_model: "xlm-roberta-base"
+  hidden_dim: 768
+  dropout: 0.1
+  
+  # Training parameters
+  batch_size: 16
+  learning_rate: 2e-5
+  num_epochs: 10
+  warmup_steps: 500
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  
+  # Loss weights
+  intent_loss_weight: 1.0
+  contrastive_loss_weight: 0.3
+  
+  # Hierarchy settings
+  use_label_attention: true
+  use_hierarchical_classifier: true
+  enable_beam_search: true
+  beam_width: 3
+  
+  # Data preprocessing
+  max_sequence_length: 512
+  include_response_ranking: true
+  augment_with_alternatives: true
+  
+  # Evaluation
+  eval_batch_size: 32
+  eval_steps: 500
+  save_steps: 1000
+  logging_steps: 100
+
+# Hardware and performance
+hardware:
+  device: "auto"  # "auto", "cuda", "cpu"
+  num_workers: 4
+  pin_memory: true
+  mixed_precision: true
+  
+  # Distributed training
+  use_distributed: false
+  world_size: 1
+  
+  # Memory optimization
+  gradient_checkpointing: false
+  dataloader_pin_memory: true
+
+# Logging and monitoring
+logging:
+  level: "INFO"
+  log_file: "logs/training.log"
+  
+  # Weights & Biases
+  use_wandb: false
+  wandb_project: "mint-cikm25"
+  wandb_entity: null
+  
+  # TensorBoard
+  use_tensorboard: true
+  tensorboard_dir: "runs/"
+
+# Output settings
+output:
+  # Model checkpoints
+  model_save_dir: "models/"
+  best_model_path: "models/best_model.pt"
+  
+  # Results
+  results_dir: "results/"
+  predictions_file: "results/predictions.json"
+  metrics_file: "results/metrics.json"
+  
+  # Generated data
+  generated_conversations_path: "data/generated/conversations.json"
+  hmm_parameters_path: "data/processed/hmm_parameters.json"
+
+# Experiment settings
+experiment:
+  # Reproducibility
+  set_seed: true
+  deterministic: true
+  
+  # Ablation studies
+  ablation_studies:
+    - name: "no_contrastive"
+      config_override:
+        mint_cl.contrastive_loss_weight: 0.0
+    
+    - name: "no_hierarchy"
+      config_override:
+        mint_cl.use_hierarchical_classifier: false
+    
+    - name: "baseline_hmm"
+      config_override:
+        chain_of_intent.primary_llm: null
+  
+  # Hyperparameter search
+  hyperparameter_search:
+    enabled: false
+    method: "grid"  # "grid", "random", "bayesian"
+    parameters:
+      learning_rate: [1e-5, 2e-5, 5e-5]
+      contrastive_loss_weight: [0.1, 0.3, 0.5]
+      batch_size: [8, 16, 32]
+
+# Evaluation settings
+evaluation:
+  # Metrics to compute
+  metrics: ["accuracy", "f1_score", "precision", "recall"]
+  
+  # Multi-language evaluation
+  evaluate_per_language: true
+  
+  # Cross-lingual evaluation
+  cross_lingual_transfer: true
+  source_languages: ["en"]
+  target_languages: ["id", "my", "ph", "sg", "vn"]
+  
+  # Error analysis
+  save_error_cases: true
+  max_error_cases: 100
+  
+  # Statistical significance
+  bootstrap_samples: 1000
+  confidence_interval: 0.95
+
+# External APIs
+apis:
+  # OpenAI
+  openai:
+    api_key_env: "OPENAI_API_KEY"
+    max_retries: 3
+    timeout: 30
+    
+  # Hugging Face
+  huggingface:
+    cache_dir: "~/.cache/huggingface"
+    use_auth_token: false
+
+# Development settings
+development:
+  debug: false
+  fast_dev_run: false  # Run with minimal data for quick testing
+  profiling: false
+  
+  # Testing
+  run_tests: true
+  test_data_size: 100
