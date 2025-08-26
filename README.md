@@ -10,6 +10,23 @@ The original implementation code cannot be shared due to copyright and proprieta
 
 The MINT-E dataset will be made available at: https://huggingface.co/datasets/fubincom/MINT_E/tree/main (currently under construction)
 
+## Pipeline Overview
+
+```
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│  Domain Knowledge│    │ Chain-of-Intent  │    │    MINT-CL      │
+│   Extraction     │───▶│   Generation     │───▶│ Classification  │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+         │                        │                        │
+    ┌────▼────┐              ┌────▼────┐              ┌────▼────┐
+    │Chat Logs│              │HMM+LLMs │              │XLM-R +  │
+    │P(T),P(I)│              │Intent   │              │Multi-   │
+    │Transi-  │              │Sampling │              │Task     │
+    │tions    │              │Dialogue │              │Learning │
+    └─────────┘              │Generate │              └─────────┘
+                             └─────────┘
+```
+
 ## Overview
 
 The implementation includes:
@@ -38,68 +55,117 @@ The implementation includes:
 - Multilingual dataset handling
 - Intent hierarchy construction
 
+## Prerequisites
+
+- Python 3.8 or higher
+- PyTorch 1.12.0 or higher
+- CUDA-capable GPU (recommended for training)
+- OpenAI API key (for dialogue generation)
+
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd MINT-CIKM25-CRcopy/code
+git clone https://github.com/junhua/chain-of-intent.git
+cd chain-of-intent
 ```
 
-2. Install dependencies:
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Set up OpenAI API key (for Chain-of-Intent):
+4. Set up OpenAI API key (required for Chain-of-Intent dialogue generation):
 ```bash
-export OPENAI_API_KEY="your-api-key-here"
+export OPENAI_API_KEY="your-openai-api-key"
+# Or add to your .bashrc/.zshrc for persistence
+echo 'export OPENAI_API_KEY="your-openai-api-key"' >> ~/.bashrc
 ```
 
 ## Quick Start
 
-### 1. Generate Dialogues
+### Step 1: Prepare Your Data
+
+Create your seed conversation data in JSON format (see [Data Format](#data-format)) or use the sample data generator:
+
+```bash
+# The script will create sample data if no seed data is found
+mkdir -p data/raw
+```
+
+### Step 2: Generate Dialogues
 
 Generate intent-driven conversations using Chain-of-Intent:
 
 ```bash
+# Generate 1000 conversations (adjust number as needed)
 python generate_dialogues.py --config config.yaml --num-conversations 1000
+
+# Optional: specify custom output path
+python generate_dialogues.py --config config.yaml --output-path data/my_conversations.json
 ```
 
-This will:
-- Extract domain knowledge from seed conversations
-- Generate new conversations using the Chain-of-Intent mechanism
-- Create alternative responses for contrastive learning
-- Save generated data for training
+**Output**: Generated conversations will be saved to `data/generated/conversations.json` and processed data to `data/processed/`.
 
-### 2. Train MINT-CL Model
+### Step 3: Train MINT-CL Model
 
 Train the multi-task contrastive learning model:
 
 ```bash
+# Train with default configuration
 python train.py --config config.yaml
+
+# Optional: enable debug mode for development
+python train.py --config config.yaml --debug
 ```
 
-This will:
-- Load and preprocess conversation data
-- Build intent hierarchy from the data
-- Train the MINT-CL model with multi-task contrastive learning
-- Evaluate on validation and test sets
-- Save model checkpoints and training metrics
+**Output**: 
+- Model checkpoints saved to `models/`
+- Training metrics saved to `results/training_history.json`
+- Final evaluation results in `results/final_metrics.json`
 
-### 3. Configuration
+### Step 4: Monitor Training
 
-Modify `config.yaml` to customize:
-- Model parameters (learning rate, batch size, etc.)
-- Data paths and preprocessing options
-- Chain-of-Intent generation settings
-- Evaluation metrics and output formats
+Check training progress:
+```bash
+# View training logs
+tail -f logs/training.log
+
+# If using TensorBoard (enabled in config.yaml)
+tensorboard --logdir runs/
+```
+
+### Step 5: Customize Configuration
+
+Edit `config.yaml` to customize:
+
+```yaml
+# Key parameters to modify
+chain_of_intent:
+  max_conversations: 5000        # Number of dialogues to generate
+  primary_llm: "gpt-3.5-turbo"  # LLM for generation
+
+mint_cl:
+  batch_size: 16                 # Adjust based on GPU memory
+  learning_rate: 2e-5            # Learning rate
+  num_epochs: 10                 # Training epochs
+
+data:
+  languages: ["en", "id", "my"]  # Languages to support
+  train_ratio: 0.7               # Train/val/test split ratios
+```
 
 ## Data Format
 
-### Input Conversation Format
+### Required Data Format
 
-The system expects conversation data in the following format:
+**For seed conversations** (place in `data/raw/seed_conversations.json`), use this JSON format:
 
 ```json
 {
@@ -124,12 +190,20 @@ The system expects conversation data in the following format:
 }
 ```
 
+### Supported File Formats
+
+- **JSON**: `data.json` (recommended)
+- **CSV**: `data.csv` with columns: `conversation_id`, `turn`, `question`, `intent`, `answer`, `language`
+- **Pickle**: `data.pkl` (for pre-processed ConversationData objects)
+
 ### Intent Hierarchy
 
-The system supports 3-level hierarchical intent classification:
+The system automatically builds a 3-level hierarchical intent classification:
 - **Level 1**: Broad categories (e.g., "order", "product", "payment")
-- **Level 2**: Sub-categories (e.g., "order_tracking", "product_info")
+- **Level 2**: Sub-categories (e.g., "order_tracking", "product_info")  
 - **Level 3**: Specific intents (e.g., "track_order", "delivery_time")
+
+**Note**: Intent hierarchy is auto-generated from your data. For custom hierarchies, modify the `build_intent_hierarchy()` function in `mint_cl.py`.
 
 ## Architecture Details
 
