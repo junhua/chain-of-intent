@@ -90,14 +90,19 @@ echo 'export OPENAI_API_KEY="your-openai-api-key"' >> ~/.bashrc
 
 ## Quick Start
 
-### Step 1: Prepare Your Data
+### Step 1: Sample Data (Ready to Use)
 
-Create your seed conversation data in JSON format (see [Data Format](#data-format)) or use the sample data generator:
+The repository includes sample data for immediate testing and reproduction:
 
 ```bash
-# The script will create sample data if no seed data is found
-mkdir -p data/raw
+# Sample data is already included in the repository
+ls data/raw/
+# sample_seed_conversations.json    - 10 multilingual e-commerce conversations  
+# sample_ecommerce_dataset.csv      - Alternative CSV format
+# intent_taxonomy.json              - Hierarchical intent definitions
 ```
+
+**No additional data preparation needed!** The system will automatically use the sample data.
 
 ### Step 2: Generate Dialogues
 
@@ -173,9 +178,18 @@ data:
 
 ## Data Format
 
-### Required Data Format
+### Sample Data Included
 
-**For seed conversations** (place in `data/raw/seed_conversations.json`), use this JSON format:
+The repository comes with ready-to-use sample data:
+
+- **`data/raw/sample_seed_conversations.json`** - 10 multilingual conversations for domain knowledge extraction
+- **`data/raw/sample_ecommerce_dataset.csv`** - Alternative CSV format with 15 conversation turns  
+- **`data/raw/intent_taxonomy.json`** - Complete hierarchical intent taxonomy
+- **`data/README.md`** - Detailed data documentation
+
+### Custom Data Format
+
+**For your own seed conversations**, use this JSON format:
 
 ```json
 {
@@ -267,7 +281,14 @@ code/
 ├── test_basic_functionality.py # Basic functionality tests
 ├── config.yaml                 # Configuration file
 ├── requirements.txt            # Dependencies
-└── README.md                  # This file
+├── README.md                  # This file
+└── data/                      # Sample data for reproducibility
+    ├── raw/                   # Input sample data
+    │   ├── sample_seed_conversations.json
+    │   ├── sample_ecommerce_dataset.csv
+    │   └── intent_taxonomy.json
+    ├── processed/            # Generated during runtime
+    └── README.md            # Data documentation
 ```
 
 ## Research Contributions

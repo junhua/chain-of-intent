@@ -1,0 +1,16 @@
+conversation_id,turn,question,intent,answer,language,domain
+sample_001,1,Where is my package?,track_order,Let me check the tracking information for you.,en,ecommerce
+sample_001,2,It's been 5 days already,delivery_time,I understand your concern. Let me escalate this to our shipping team.,en,ecommerce
+sample_002,1,Can I return this item?,return_policy,Yes you can return it within 30 days with original receipt.,en,ecommerce
+sample_003,1,My order is wrong,product_issue,I'm sorry about the incorrect order. Let me help you fix this right away.,en,ecommerce
+sample_003,2,I ordered blue but got red,product_issue,I'll arrange an exchange for the correct blue item immediately.,en,ecommerce
+sample_003,3,How long will exchange take?,delivery_time,The exchange will take 3-5 business days once we receive the wrong item.,en,ecommerce
+sample_004,1,Berapa kos penghantaran?,shipping_cost,Kos penghantaran adalah RM8 untuk Semenanjung Malaysia.,my,ecommerce
+sample_005,1,Magkano ang shipping fee?,shipping_cost,Ang shipping fee ay 150 pesos para sa Metro Manila.,ph,ecommerce
+sample_005,2,May free shipping ba?,discount_inquiry,Meron po! Free shipping kapag 1000 pesos and above ang order.,ph,ecommerce
+sample_006,1,Barang tidak sesuai ukuran,size_guide,Maaf atas masalah ukuran. Kami bisa bantu tukar dengan ukuran yang tepat.,id,ecommerce
+sample_007,1,Website cannot load properly,technical_support,I'm sorry about the technical issue. Let me help troubleshoot this.,en,ecommerce
+sample_008,1,Payment was declined,payment_issue,Let me help you with the payment issue. We can try a different payment method.,en,ecommerce
+sample_008,2,Can I pay by bank transfer?,payment_issue,Yes we accept bank transfer. I'll send you the account details.,en,ecommerce
+sample_009,1,Do you have student discount?,discount_inquiry,Yes! We offer 10% student discount with valid student ID verification.,en,ecommerce
+sample_010,1,Item out of stock when?,product_availability,This item will be restocked next week. I can notify you when it's available.,en,ecommerce

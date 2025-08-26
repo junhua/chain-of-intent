@@ -59,9 +59,16 @@ def load_seed_data(config: Dict[str, Any]) -> List[Dict]:
     
     # Check for existing seed data
     raw_data_path = Path(config['data']['raw_data_path'])
+    
+    # Try sample seed data first, then fallback to generated seed data
+    sample_seed_file = raw_data_path / "sample_seed_conversations.json"
     seed_data_file = raw_data_path / "seed_conversations.json"
     
-    if seed_data_file.exists():
+    if sample_seed_file.exists():
+        logger.info(f"Loading sample seed data from {sample_seed_file}")
+        with open(sample_seed_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    elif seed_data_file.exists():
         logger.info(f"Loading seed data from {seed_data_file}")
         with open(seed_data_file, 'r', encoding='utf-8') as f:
             return json.load(f)

@@ -1,6 +1,6 @@
 {
   "total_conversations": 3,
-  "total_turns": 4,
+  "total_turns": 5,
   "languages": {
     "en": 3
   },
@@ -8,29 +8,27 @@
     "ecommerce": 3
   },
   "intents": {
-    "track_order": 1,
-    "product_info": 1,
-    "size_guide": 1,
-    "account_issue": 1
+    "order_modification": 1,
+    "shipping_cost": 1,
+    "track_order": 3
   },
   "turn_distribution": {
-    "1": 2,
-    "2": 1
+    "2": 2,
+    "1": 1
   },
   "questions_per_intent": {
+    "order_modification": [
+      "Can help me change delivery address??"
+    ],
+    "shipping_cost": [
+      "Can I get free shipping??"
+    ],
     "track_order": [
-      "Where is my order #ORD40771??"
-    ],
-    "product_info": [
-      "What are the product specifications??"
-    ],
-    "size_guide": [
-      "Do you have a size chart??"
-    ],
-    "account_issue": [
-      "I forgot my login details?"
+      "Nomor pesanannya ORD67890?",
+      "Pesanan saya belum sampai?",
+      "Where is my order #ORD12345??"
     ]
   },
-  "avg_question_length": 5.25,
-  "avg_turns_per_conversation": 1.3333333333333333
+  "avg_question_length": 4.6,
+  "avg_turns_per_conversation": 1.6666666666666667
 }

@@ -418,3 +418,51 @@ A detailed migration guide is available here: https://github.com/openai/openai-p
 2025-08-26 18:54:22,577 - __main__ - INFO - Unique Intents: 4
 2025-08-26 18:54:22,577 - __main__ - INFO - Saved generation statistics to results/generation_statistics.json
 2025-08-26 18:54:22,577 - __main__ - INFO - Dialogue generation completed successfully!
+2025-08-26 19:08:13,801 - __main__ - INFO - Starting dialogue generation with config: config.yaml
+2025-08-26 19:08:13,801 - __main__ - INFO - Will generate 3 conversations
+2025-08-26 19:08:13,801 - __main__ - INFO - Random seed set to: 42
+2025-08-26 19:08:13,801 - __main__ - INFO - Loading seed conversation data...
+2025-08-26 19:08:13,801 - __main__ - INFO - Loading sample seed data from data/raw/sample_seed_conversations.json
+2025-08-26 19:08:13,801 - __main__ - INFO - Loaded 21 turns from 10 seed conversations
+2025-08-26 19:08:13,801 - __main__ - INFO - Extracting domain knowledge...
+2025-08-26 19:08:13,801 - chain_of_intent - INFO - Extracting domain knowledge from chat logs...
+2025-08-26 19:08:13,802 - chain_of_intent - INFO - Extracted knowledge: 9 intents, 3 turn lengths
+2025-08-26 19:08:13,802 - __main__ - INFO - Saved domain knowledge to data/processed/hmm_parameters.json
+2025-08-26 19:08:13,802 - __main__ - INFO - Generating 3 new conversations...
+2025-08-26 19:08:15,712 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:15,712 - chain_of_intent - ERROR - Error generating question with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:16,535 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:16,536 - chain_of_intent - ERROR - Error generating answer with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:17,224 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:17,225 - chain_of_intent - ERROR - Error generating question with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:17,540 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:17,540 - chain_of_intent - ERROR - Error generating answer with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:18,371 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:18,372 - chain_of_intent - ERROR - Error generating answer with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:18,792 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:18,793 - chain_of_intent - ERROR - Error generating question with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:19,041 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:19,041 - chain_of_intent - ERROR - Error generating answer with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:19,318 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:19,318 - chain_of_intent - ERROR - Error generating answer with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:19,565 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:19,565 - chain_of_intent - ERROR - Error generating question with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:19,841 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:19,841 - chain_of_intent - ERROR - Error generating answer with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:20,082 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:20,082 - chain_of_intent - ERROR - Error generating question with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:20,365 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:20,366 - chain_of_intent - ERROR - Error generating answer with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:20,635 - openai - INFO - error_code=billing_not_active error_message='Your account is not active, please check your billing details on our website.' error_param=None error_type=billing_not_active message='OpenAI API error received' stream_error=False
+2025-08-26 19:08:20,635 - chain_of_intent - ERROR - Error generating answer with LLM: Your account is not active, please check your billing details on our website.
+2025-08-26 19:08:20,635 - __main__ - INFO - Generated 3 conversations so far...
+2025-08-26 19:08:20,636 - __main__ - INFO - Saved 3 generated conversations to data/generated/conversations.json
+2025-08-26 19:08:20,637 - data_utils - INFO - Saved data to data/processed/generated_conversations.json in json format
+2025-08-26 19:08:20,637 - __main__ - INFO - Generation Statistics:
+2025-08-26 19:08:20,637 - __main__ - INFO - Total Conversations: 3
+2025-08-26 19:08:20,637 - __main__ - INFO - Total Turns: 5
+2025-08-26 19:08:20,637 - __main__ - INFO - Average Turns per Conversation: 1.67
+2025-08-26 19:08:20,637 - __main__ - INFO - Average Question Length: 4.60 words
+2025-08-26 19:08:20,637 - __main__ - INFO - Unique Intents: 3
+2025-08-26 19:08:20,637 - __main__ - INFO - Saved generation statistics to results/generation_statistics.json
+2025-08-26 19:08:20,637 - __main__ - INFO - Dialogue generation completed successfully!

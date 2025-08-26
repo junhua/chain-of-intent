@@ -1,0 +1,88 @@
+{
+  "intent_hierarchy": {
+    "description": "3-level hierarchical intent taxonomy for e-commerce customer service",
+    "levels": {
+      "level_1": {
+        "description": "Broad intent categories",
+        "categories": [
+          "order",
+          "product", 
+          "payment",
+          "support",
+          "account",
+          "shipping",
+          "general"
+        ]
+      },
+      "level_2": {
+        "description": "Sub-categories within each level 1 category",
+        "mappings": {
+          "order": ["order_tracking", "order_modification", "order_cancellation"],
+          "product": ["product_inquiry", "product_issue", "product_availability"],
+          "payment": ["payment_issue", "payment_method", "refund_inquiry"],
+          "support": ["technical_support", "policy_inquiry", "complaint"],
+          "account": ["account_access", "account_modification", "account_inquiry"],
+          "shipping": ["shipping_inquiry", "delivery_issue", "shipping_cost"],
+          "general": ["greeting", "thanks", "goodbye"]
+        }
+      },
+      "level_3": {
+        "description": "Specific intents (leaf nodes)",
+        "mappings": {
+          "order_tracking": ["track_order", "delivery_time", "delivery_status"],
+          "order_modification": ["change_address", "modify_order", "add_items"],
+          "order_cancellation": ["cancel_order", "cancel_item"],
+          "product_inquiry": ["product_info", "size_guide", "product_comparison"],
+          "product_issue": ["damaged_item", "wrong_item", "missing_item"],
+          "product_availability": ["stock_inquiry", "restock_notification", "size_availability"],
+          "payment_issue": ["payment_failed", "double_charge", "payment_verification"],
+          "payment_method": ["payment_options", "installment_inquiry", "payment_security"],
+          "refund_inquiry": ["refund_status", "refund_policy", "refund_request"],
+          "technical_support": ["website_issue", "app_problem", "login_problem"],
+          "policy_inquiry": ["return_policy", "warranty_inquiry", "terms_conditions"],
+          "complaint": ["service_complaint", "product_complaint", "delivery_complaint"],
+          "account_access": ["forgot_password", "account_locked", "login_help"],
+          "account_modification": ["change_email", "change_phone", "update_profile"],
+          "account_inquiry": ["account_status", "membership_inquiry", "points_inquiry"],
+          "shipping_inquiry": ["shipping_options", "shipping_time", "shipping_tracking"],
+          "delivery_issue": ["delayed_delivery", "failed_delivery", "delivery_damage"],
+          "shipping_cost": ["shipping_fee", "free_shipping", "express_shipping"],
+          "greeting": ["hello", "hi", "good_morning"],
+          "thanks": ["thank_you", "thanks", "appreciate"],
+          "goodbye": ["bye", "goodbye", "see_you"]
+        }
+      }
+    }
+  },
+  "intent_definitions": {
+    "track_order": "User wants to know the current status/location of their order",
+    "delivery_time": "User asks about expected delivery time or date",
+    "return_policy": "User inquires about return/exchange policies and procedures",
+    "product_info": "User requests information about product specifications or details",
+    "product_availability": "User checks if a specific product/variant is in stock",
+    "payment_issue": "User reports problems with payment processing or charges",
+    "cancel_order": "User wants to cancel their order or specific items",
+    "refund_status": "User inquires about the status of their refund",
+    "size_guide": "User needs help with sizing information or recommendations",
+    "shipping_cost": "User asks about shipping fees and delivery options",
+    "discount_inquiry": "User asks about available discounts, promotions, or coupons",
+    "account_issue": "User has problems accessing or managing their account",
+    "technical_support": "User needs help with website, app, or system issues",
+    "order_modification": "User wants to change details of an existing order"
+  },
+  "language_examples": {
+    "en": {
+      "track_order": ["Where is my order?", "Can you track my package?", "What's the status of order #123?"],
+      "delivery_time": ["When will it arrive?", "How long does shipping take?", "Expected delivery date?"],
+      "return_policy": ["How can I return this?", "What's your return policy?", "Can I exchange this item?"]
+    },
+    "id": {
+      "track_order": ["Dimana pesanan saya?", "Bisa lacak paket saya?", "Status pesanan nomor 123?"],
+      "delivery_time": ["Kapan akan sampai?", "Berapa lama pengiriman?", "Tanggal pengiriman?"]
+    },
+    "my": {
+      "track_order": ["Mana barang saya?", "Boleh track parcel tak?", "Status order macam mana?"],
+      "delivery_time": ["Bila nak sampai?", "Berapa lama shipping?", "Tarikh hantar bila?"]
+    }
+  }
+}

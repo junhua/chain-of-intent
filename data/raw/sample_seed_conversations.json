@@ -1,0 +1,198 @@
+[
+  {
+    "conversation_id": "seed_001",
+    "turns": 2,
+    "language": "en",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Where is my order #ORD12345?",
+        "intent": "track_order",
+        "answer": "Let me check your order status for you. I can see your order ORD12345 is currently being processed at our fulfillment center."
+      },
+      {
+        "turn": 2,
+        "question": "When will it arrive?",
+        "intent": "delivery_time", 
+        "answer": "Based on your location and shipping method, your order should arrive within 3-5 business days."
+      }
+    ]
+  },
+  {
+    "conversation_id": "seed_002",
+    "turns": 1,
+    "language": "en",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "What's your return policy?",
+        "intent": "return_policy",
+        "answer": "We offer a 30-day return policy for most items. Items must be in original condition with tags attached."
+      }
+    ]
+  },
+  {
+    "conversation_id": "seed_003",
+    "turns": 3,
+    "language": "en",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Do you have this shirt in size medium?",
+        "intent": "product_availability",
+        "answer": "Let me check our inventory for you. Which specific shirt are you looking for?"
+      },
+      {
+        "turn": 2,
+        "question": "The blue cotton t-shirt on sale",
+        "intent": "product_info",
+        "answer": "Yes, we have the blue cotton t-shirt in medium size. It's currently on sale for $19.99."
+      },
+      {
+        "turn": 3,
+        "question": "Can I get free shipping?",
+        "intent": "shipping_cost",
+        "answer": "Free shipping is available on orders over $25. Your current order qualifies for free standard shipping."
+      }
+    ]
+  },
+  {
+    "conversation_id": "seed_004",
+    "turns": 2,
+    "language": "id",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Pesanan saya belum sampai",
+        "intent": "track_order",
+        "answer": "Saya akan bantu cek status pesanan Anda. Bisa berikan nomor pesanan?"
+      },
+      {
+        "turn": 2,
+        "question": "Nomor pesanannya ORD67890",
+        "intent": "track_order",
+        "answer": "Pesanan ORD67890 sedang dalam perjalanan dan akan tiba besok."
+      }
+    ]
+  },
+  {
+    "conversation_id": "seed_005",
+    "turns": 2,
+    "language": "en",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "My payment failed but I was charged",
+        "intent": "payment_issue",
+        "answer": "I'm sorry to hear about the payment issue. Let me help you resolve this right away."
+      },
+      {
+        "turn": 2,
+        "question": "When will I get my refund?",
+        "intent": "refund_status",
+        "answer": "Refunds typically process within 3-5 business days. I'll escalate this to our billing team for faster resolution."
+      }
+    ]
+  },
+  {
+    "conversation_id": "seed_006",
+    "turns": 3,
+    "language": "my",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Barang saya rosak sampai",
+        "intent": "product_issue",
+        "answer": "Maaf mendengar produk yang rosak. Saya boleh bantu arrange replacement."
+      },
+      {
+        "turn": 2,
+        "question": "Macam mana nak return?",
+        "intent": "return_policy",
+        "answer": "Kami akan arrange courier pickup untuk item yang rosak tu."
+      },
+      {
+        "turn": 3,
+        "question": "Bila dapat replacement?",
+        "intent": "delivery_time",
+        "answer": "Replacement akan sampai dalam 2-3 hari lepas kami receive return item."
+      }
+    ]
+  },
+  {
+    "conversation_id": "seed_007",
+    "turns": 1,
+    "language": "en",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "How do I cancel my order?",
+        "intent": "cancel_order",
+        "answer": "You can cancel your order if it hasn't been shipped yet. Let me check the status and help you cancel it."
+      }
+    ]
+  },
+  {
+    "conversation_id": "seed_008",
+    "turns": 2,
+    "language": "ph",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "May discount ba kayo ngayon?",
+        "intent": "discount_inquiry",
+        "answer": "Meron kaming 15% off sa lahat ng summer items this week!"
+      },
+      {
+        "turn": 2,
+        "question": "Paano mag-apply ng discount code?",
+        "intent": "discount_inquiry",
+        "answer": "I-enter lang ang code 'SUMMER15' sa checkout page para ma-apply ang discount."
+      }
+    ]
+  },
+  {
+    "conversation_id": "seed_009",
+    "turns": 2,
+    "language": "en",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "I can't log into my account",
+        "intent": "account_issue",
+        "answer": "I can help you with account access. Let me guide you through resetting your password."
+      },
+      {
+        "turn": 2,
+        "question": "I didn't receive the reset email",
+        "intent": "technical_support",
+        "answer": "Sometimes emails take a few minutes. Please check your spam folder, and I'll resend it for you."
+      }
+    ]
+  },
+  {
+    "conversation_id": "seed_010",
+    "turns": 3,
+    "language": "sg",
+    "dialogue": [
+      {
+        "turn": 1,
+        "question": "Can help me change delivery address?",
+        "intent": "order_modification",
+        "answer": "Can lah! What's your order number and the new address?"
+      },
+      {
+        "turn": 2,
+        "question": "Order ORD11111, new address is Orchard Road",
+        "intent": "order_modification",
+        "answer": "Okay, I've updated your delivery address to Orchard Road. Anything else?"
+      },
+      {
+        "turn": 3,
+        "question": "How much extra for same day delivery?",
+        "intent": "shipping_cost",
+        "answer": "Same day delivery is $15 extra, but since you're in CBD area, can waive the fee for you!"
+      }
+    ]
+  }
+]
