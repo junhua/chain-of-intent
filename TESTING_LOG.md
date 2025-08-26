@@ -1,4 +1,4 @@
-# Complete Testing Log - MINT-CIKM25 Implementation
+# Testing Log
 
 This document contains the complete end-to-end testing log for the MINT-CIKM25 Chain-of-Intent and MINT-CL implementation, verifying full functionality and reproducibility.
 
