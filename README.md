@@ -1,4 +1,4 @@
-# MINT-CIKM25: From Intents to Conversations
+# Chain-of-Intent: Intent-Driven Dialogue Generation with Multi-Task Contrastive Learning
 
 This repository contains a source code implementation for the paper "From Intents to Conversations: Generating Intent-Driven Dialogues with Contrastive Learning for Multi-Turn Classification" accepted at CIKM 2025.
 
